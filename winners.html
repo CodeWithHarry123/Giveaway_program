@@ -1,50 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Giveaway Winners – ThinkNew</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-  <div class="hero">
-    <div class="card glass">
-      <h1>🏆 Giveaway Winners</h1>
-      <p>Here are the lucky winners of the ThinkNew Giveaway!</p>
+<div class="winner-list">
 
-      <div class="winner-list">
-
-        <!-- Winner #1 -->
-        <div class="winner-card">
-          <img src="https://i.ibb.co/Sd7dF8s/avatar-blur.png" alt="Winner Avatar">
-          <div class="winner-info">
-            <h3>Ravi Sharma</h3>
-            <p>📱 9876xxxxxx</p>
-            <blockquote>"Thank you so much for the reward! You made my day 😊"</blockquote>
-          </div>
-        </div>
-
-        <!-- Winner #2 -->
-        <div class="winner-card">
-          <img src="https://i.ibb.co/Sd7dF8s/avatar-blur.png" alt="Winner Avatar">
-          <div class="winner-info">
-            <h3>Pooja Mehra</h3>
-            <p>📱 9090xxxxxx</p>
-            <blockquote>"I never win anything… but this felt magical. 💖"</blockquote>
-          </div>
-        </div>
-
-        <!-- More winners can be added here -->
-        
-      </div>
+  <!-- Winner #1 -->
+  <div class="winner-card">
+    <img src="https://i.ibb.co/Sd7dF8s/avatar-blur.png" alt="Winner Avatar">
+    <div class="winner-info">
+      <h3>Ravi Sharma</h3>
+      <p>📱 9876xxxxxx</p>
+      <blockquote>"Thank you so much for the reward! You made my day 😊"</blockquote>
     </div>
   </div>
 
-  <footer>
-    &copy; 2025 ThinkNew | All rights reserved.
-  </footer>
+  <!-- Winner #2 -->
+  <div class="winner-card">
+    <img src="https://i.ibb.co/Sd7dF8s/avatar-blur.png" alt="Winner Avatar">
+    <div class="winner-info">
+      <h3>Pooja Mehra</h3>
+      <p>📱 9090xxxxxx</p>
+      <blockquote>"I never win anything… but this felt magical. 💖"</blockquote>
+    </div>
+  </div>
 
-  <script src="script.js"></script>
-</body>
-</html>
+  <!-- Winners #3 to #50 -->
+  <!-- You can replace names/messages if needed -->
+  ${Array.from({ length: 48 }, (_, i) => {
+    const firstNames = ["Aman", "Sneha", "Raj", "Kiran", "Vivek", "Simran", "Nikhil", "Divya", "Aryan", "Neha", "Aarti", "Ankit", "Sonal", "Harsh", "Kajal", "Mohit", "Isha", "Rohit", "Payal", "Varun"];
+    const lastNames = ["Verma", "Kumar", "Sharma", "Patel", "Yadav", "Rana", "Joshi", "Das", "Singh", "Thakur"];
+    const emojis = ["🌟", "🎉", "😊", "❤️", "🙌", "💖", "🎁", "🔥", "🥳", "💫"];
+    const messages = [
+      "Feeling lucky to be a part of this 🎉",
+      "Was not expecting this, thank you ❤️",
+      "Big fan of your content 🔥",
+      "Amazing channel and giveaways! 🙌",
+      "Really grateful for this chance 💫",
+      "Keep up the awesome work! 🌟",
+      "Loved the surprise gift 💖",
+      "Respect and love from my side 🥳"
+    ];
+
+    const name = `${firstNames[i % firstNames.length]} ${lastNames[i % lastNames.length]}`;
+    const number = `${Math.floor(7000 + Math.random() * 3000)}xxxxxx`;
+    const msg = messages[i % messages.length];
+
+    return `
+    <div class="winner-card">
+      <img src="https://i.ibb.co/Sd7dF8s/avatar-blur.png" alt="Winner Avatar">
+      <div class="winner-info">
+        <h3>${name}</h3>
+        <p>📱 ${number}</p>
+        <blockquote>"${msg}"</blockquote>
+      </div>
+    </div>`;
+  }).join("\n")}
+
+</div>
