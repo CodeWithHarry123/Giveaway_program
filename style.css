@@ -1,65 +1,97 @@
 body {
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #f9f9f9, #e0f7fa);
-  color: #333;
   margin: 0;
   padding: 0;
+  font-family: 'Outfit', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.container {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 20px;
-  background: #fff;
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 500px;
   text-align: center;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
 }
 
 h1 {
-  color: #00897b;
+  font-size: 2em;
+  color: #fff;
   margin-bottom: 10px;
 }
 
-p, li {
-  margin: 10px 0;
+p {
+  color: #d0f0ff;
+  margin-bottom: 20px;
+}
+
+.instructions {
   text-align: left;
+  padding-left: 20px;
+  color: #e0f7fa;
+  margin-bottom: 30px;
 }
 
-.button {
-  display: inline-block;
-  margin: 20px 10px;
-  padding: 14px 24px;
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: background 0.3s ease;
+.instructions li {
+  margin-bottom: 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 8px;
   text-decoration: none;
-}
-
-.subscribe-btn {
-  background-color: #ff5252;
+  font-weight: bold;
   color: white;
+  transition: all 0.3s ease;
 }
 
-.subscribe-btn:hover {
-  background-color: #e53935;
+.red {
+  background: #f44336;
 }
 
-.form-btn {
-  background-color: #4caf50;
-  color: white;
+.red:hover {
+  background: #d32f2f;
 }
 
-.form-btn:hover {
-  background-color: #388e3c;
+.green {
+  background: #4caf50;
+}
+
+.green:hover {
+  background: #388e3c;
+}
+
+.date-note {
+  color: #b2ebf2;
+  font-size: 0.9em;
 }
 
 footer {
-  margin-top: 40px;
   text-align: center;
-  font-size: 12px;
-  color: #888;
+  font-size: 0.8em;
+  color: #ccc;
+  margin-top: 40px;
+  padding-bottom: 20px;
 }
